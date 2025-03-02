@@ -46,52 +46,67 @@
 			</header>
 
 			<!-- Banner -->
-			 <!-- Banner -->
-				<div style="background: url('images/children.jpeg') center/cover no-repeat; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;">
-					<section id="banner">
-						<h2>About Us</h2>
-						<p>Engaging a multi-sectoral and professional approach with strong community participation and <br> ownership for the enhancement of health, rights, and development initiatives. </p>
-						<!-- <ul class="actions special">
-							<li><a href="#" class="button primary">Sign Up</a></li>
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
+			<div style="position: relative; width: 100%; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+				<!-- Background Image -->
+				<div style="position: absolute; width: 100%; height: 100%; background: url('images/children.jpeg') center/cover no-repeat;"></div>
+				
+				<!-- Dark Blue Transparent Overlay -->
+				<div style="position: absolute; width: 50%; height: 100%; left: 0; background: linear-gradient(to right, rgba(13, 4, 61, 0.7), rgba(13, 4, 61, 0)); display: flex; align-items: center; padding: 40px;">
+					<section id="banner1" style="max-width: 600px; color: white; text-align: left;">
+						<h2 style="font-weight: bold; font-size: 50px; color: white;">About Us</h2>
 					</section>
 				</div>
+			</div>
+
+			<style>
+				.white-box {
+					position: absolute;
+					bottom: -90%;
+					left: 50%;
+					transform: translateX(-50%);
+					background: white;
+					padding: 40px;
+					box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+					border-radius: 10px;
+					z-index: 2;
+					max-width: 80%;
+					text-align: center;
+				}
+			</style>
 
 			<!-- Main -->
-				<!-- Statistics-->
-				<section id="main" class="container">
-					<section class="box special">
-						<header class="major">
-							<section class="box special features">
-								<div class="features-row">
-									<section>
-										<span class="icon solid major fa-bolt accent2"></span>
-										<h3>20 Districts</h3>
-										<p>Supported districts with HIV and TB community awareness, testing, and screening.</p>
-									</section>
-									<section>
-										<span class="icon solid major fa-chart-area accent3"></span>
-										<h3># People Reached</h3>
-										<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-									</section>
-								</div>
-								<div class="features-row">
-									<section>
-										<span class="icon solid major fa-cloud accent4"></span>
-										<h3># Medications Delivered</h3>
-										<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-									</section>
-									<section>
-										<span class="icon solid major fa-lock accent5"></span>
-										<h3># Workshops Held</h3>
-										<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-									</section>
-								</div>
+			<section id="main" class="container">
+				<div class="white-box">
+					<section class="box special features" style="width: 100%;">
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-bolt accent2"></span>
+								<h3>20 Districts</h3>
+								<p>Supported districts with HIV and TB community awareness, testing, and screening.</p>
 							</section>
-						</header>
-						<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>-->
+							<section>
+								<span class="icon solid major fa-chart-area accent3"></span>
+								<h3># People Reached</h3>
+								<p>xxx</p>
+							</section>
+						</div>
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-cloud accent4"></span>
+								<h3># Medications Delivered</h3>
+								<p>xxx</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-lock accent5"></span>
+								<h3># Workshops Held</h3>
+								<p>xxx</p>
+							</section>
+						</div>
 					</section>
+				</div>
+			</section>
+
+
 
 					<!--History-->
 					<div style="background-image: url(images/standing_in_circle.png)">
