@@ -46,55 +46,71 @@
 			</header>
 
 			<!-- Banner -->
-			<div style="display: flex; width: 100%; height: 100vh;">
+			<div style="position: relative; display: flex; width: 100%; height: 100vh; overflow: hidden;">
 				<!-- Left Side (Image) -->
 				<div style="flex: 4.5; background: url('images/children.jpeg') center/cover no-repeat;"></div>
-			
+
 				<!-- Right Side (Blue Background with White Text) -->
 				<div style="flex: 1; background: #0d043d; display: flex; align-items: center; justify-content: center; color: white; padding: 40px;">
 					<section id="banner1" style="text-align: left; max-width: 600px;">
-						<h2 class="rotated-text" style="font-weight: bold; font-size: 500px; color: white;">About Us</h2>
+						<h2 class="rotated-text" style="font-weight: bold; font-size: 50px; color: white;">About Us</h2>
 					</section>
 				</div>
-				
-				<style>
-					.rotated-text {
-						transform: rotate(270deg);
-						transform-origin: left top;
-						display: inline-block;
-					}
-				</style>
-			</div>				
+			</div>
+
+			<style>
+				.rotated-text {
+					transform: rotate(270deg);
+					transform-origin: left top;
+					display: inline-block;
+				}
+				.white-box {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background: white;
+					padding: 40px;
+					box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+					border-radius: 10px;
+					z-index: 2;
+					max-width: 80%;
+					text-align: center;
+				}
+			</style>
 
 			<!-- Main -->
 			<section id="main" class="container">
-				<section class="box special features" style="width: 100%; text-align: center;">
-					<div class="features-row">
-						<section>
-							<span class="icon solid major fa-bolt accent2"></span>
-							<h3>20 Districts</h3>
-							<p>Supported districts with HIV and TB community awareness, testing, and screening.</p>
-						</section>
-						<section>
-							<span class="icon solid major fa-chart-area accent3"></span>
-							<h3># People Reached</h3>
-							<p>xxx</p>
-						</section>
-					</div>
-					<div class="features-row">
-						<section>
-							<span class="icon solid major fa-cloud accent4"></span>
-							<h3># Medications Delivered</h3>
-							<p>xxx</p>
-						</section>
-						<section>
-							<span class="icon solid major fa-lock accent5"></span>
-							<h3># Workshops Held</h3>
-							<p>xxx</p>
-						</section>
-					</div>
-				</section>
+				<div class="white-box">
+					<section class="box special features" style="width: 100%;">
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-bolt accent2"></span>
+								<h3>20 Districts</h3>
+								<p>Supported districts with HIV and TB community awareness, testing, and screening.</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-chart-area accent3"></span>
+								<h3># People Reached</h3>
+								<p>xxx</p>
+							</section>
+						</div>
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-cloud accent4"></span>
+								<h3># Medications Delivered</h3>
+								<p>xxx</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-lock accent5"></span>
+								<h3># Workshops Held</h3>
+								<p>xxx</p>
+							</section>
+						</div>
+					</section>
+				</div>
 			</section>
+
 
 					<!--History-->
 					<div style="background-image: url(images/standing_in_circle.png)">
