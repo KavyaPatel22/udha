@@ -3171,13 +3171,16 @@
 		background-attachment: fixed;
 		background-color: #666;
 		background-image: url("images/overlay.png");
-		background-position: top left, center center;
-		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
 		color: #fff;
-		padding: 8em 2em 4em 2em;
+		padding: 0 2em 0 2em;
 		text-align: center;
 		z-index: 1; /* Ensure content stays above the overlay */
+		width: 100%;
+		height: auto;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
 	}
 		#banner :last-child {
 			margin-bottom: 0;
@@ -3247,16 +3250,6 @@
 		position: relative;
 		z-index: 2;
 	}
-
-	/* Improve button readability */
-	/* #banner .button {
-		background-color: rgba(0, 0, 0, 0.5);
-		border: 2px solid rgba(255, 255, 255, 0.5);
-	}
-
-	#banner .button:hover {
-		background-color: rgba(0, 0, 0, 0.7);
-	} */
 
 	#banner.index-banner {
 		background-image: url("images/collage_banner.svg");
