@@ -3175,7 +3175,7 @@
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		color: #fff;
-		padding: 8em 0 12em 0;
+		padding: 8em 2em 8em 2em;
 		text-align: center;
 		z-index: 1; /* Ensure content stays above the overlay */
 	}
@@ -3238,7 +3238,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.8) 100%);
+		background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.3) 30%);
 		z-index: -1; /* Place it behind the text */
 	}
 
