@@ -3172,15 +3172,14 @@
 		background-color: #666;
 		background-image: url("images/overlay.png");
 		color: #fff;
-		padding: 0 2em 0 2em;
+		padding: 0 0 0 0;
 		text-align: center;
 		z-index: 1; /* Ensure content stays above the overlay */
 		width: 100%;
 		height: auto;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-
 	}
 		#banner :last-child {
 			margin-bottom: 0;
@@ -3241,9 +3240,11 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.8) 100%);
-		z-index: -1; /* Place it behind the text */
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 30%,  /* Opaque at the top */
+												rgba(0, 0, 0, 0.5) 50%); /* More transparent */
+		z-index: -1; /* Keeps it behind the content */
 	}
+			
 
 	/* Ensure text and buttons remain readable */
 	#banner h2, #banner p, #banner .actions {
@@ -3252,7 +3253,7 @@
 	}
 
 	#banner.index-banner {
-		background-image: url("images/collage_banner.svg");
+		background-image: url("images/group.jpg");
 	}
 			
 
