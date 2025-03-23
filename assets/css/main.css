@@ -3175,7 +3175,7 @@
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		color: #fff;
-		padding: 8em 0 12em 0;
+		padding: 8em 0 8em 0;
 		text-align: center;
 		z-index: 1; /* Ensure content stays above the overlay */
 	}
