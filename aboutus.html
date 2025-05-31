@@ -41,88 +41,79 @@
 			</header>
 
 			<!-- Banner -->
-			<div style="position: relative; width: 100%; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-				<!-- Background Image -->
-				<div style="position: absolute; width: 100%; height: 100%; background: url('images/children.jpeg') center/cover no-repeat;"></div>
-				
-				<!-- Dark Blue Transparent Overlay -->
-				<div style="position: absolute; width: 50%; height: 100%; left: 0; background: linear-gradient(to right, rgba(13, 3, 71, 0.9) 0%, rgba(13, 3, 71, 0.6) 40%, rgba(13, 3, 71, 0.3) 70%, rgba(13, 3, 71, 0) 80%); display: flex; align-items: center; padding: 40px 40px 40px 100px;">
+			<div style="position: relative; width: 100%; overflow: hidden; z-index: 10">
+				<!-- Full image shown, width-filling, height-auto -->
+				<img src="images/children.jpeg" alt="Children" style="width: 100%; height: auto; display: block; transform: translateY(-50px);" />
+
+				<!-- Overlay with text -->
+				<div style="position: absolute; top: 0; height: 100%; left: 0; width: 70%; z-index: 10;
+							background: linear-gradient(to right, rgba(13, 3, 71, 0.9), rgba(13, 3, 71, 0.6) 40%, rgba(13, 3, 71, 0.3) 70%, rgba(13, 3, 71, 0) 80%);
+							display: flex; align-items: center; padding: 40px 40px 40px 100px;">
 					<section id="banner1" style="max-width: 600px; color: white; text-align: left;">
-						<h1 style="font-weight: bold; font-size: 100px; color: white; left: 20px;">ABOUT US</h1>
-						<h3 style="left: 20px;"><b><i style="color: white">Rooted in community, committed to change</i></b></h3>
+					<h1 style="font-weight: bold; font-size: 100px; color: white; margin-top: -200px">ABOUT US</h1>
+					<h3><b><i style="color: white">Rooted in community, committed to change</i></b></h3>
 					</section>
 				</div>
 			</div>
 
-			<style>
-				.white-box {
-					position: absolute;
-					bottom: -90%;
-					left: 50%;
-					transform: translateX(-50%);
-					background: white;
-					padding: 40px;
-					box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-					border-radius: 10px;
-					z-index: 2;
-					max-width: 80%;
-					text-align: center;
-				}
-			</style>
-
 			<!--Statistics -->
-			<section style="width: 100%; height: 100%; background-color: #EBEBD3;">
-					<section id="main" class="container" style="margin-top: -150px">
-						<div class="white-box" style="position: relative; margin-top: -50px; z-index: 2; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto; 
-								background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 30px;">
-							<section style="width: 100%;">
-								<div class="features-row" 
-									style="display: flex; justify-content: center; align-items: center; text-align: center; gap: 0;">
-									
-									<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
-										<div class="red-circle">
-										</div>
-										<h3><b>20</b></h3>
-										<h3 style="margin-top: -15px">Districts</h3>
-										<p>HIV and TB prevention, risk reduction, testing, screening, and community awareness.</p>
-									</section>
-
-									<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
-										<div class="red-circle"></div>
-										<h3><b>3,155,796</b></h3>
-										<h3 style="margin-top: -15px">People Reached</h3>
-										<p>Through community empowerment, community participation, and building resilient households.</p>
-									</section>
-
-									<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
-										<div class="red-circle"></div>
-										<h3><b>403,000</b></h3>
-										<h3 style="margin-top: -15px; font-size: 23px">Resilient Households</h3>
-										<p>Promoting sustainable, gender-sensitive agriculture, youth skills, and climate resilience.</p>
-									</section>
-
-									<section style="flex: 1; padding: 20px;">
-										<div class="red-circle"></div>
-										<h3><b>1,900,000</b></h3>
-										<h3 style="margin-top: -15px; font-size: 23px">Communities</h3>
-										<p>Focus on children, youth out of school, orphans, widows, and the Most-at-Risk-Populations.</p>
-									</section>
+			<section id="main" class="container" style="margin-top: -500px">
+				<div class="white-box" style="position: relative; margin-top: -50px; z-index: 40; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto; 
+						background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 30px;">
+					<section style="width: 100%;">
+						<div class="features-row" 
+							style="display: flex; justify-content: center; align-items: center; text-align: center; gap: 0;">
+							
+							<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
+								<div class="red-circle">
+									<img src="icons/syringe.png" style="width: 50px; height: 50px;" />
 								</div>
+								<h3 style="color: black;"><b>20</b></h3>
+								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>Districts</b></h3>
+								<p style="color: black; line-height: 1.3; margin-top: 30px;">HIV and TB prevention, risk reduction, testing, screening, and community awareness.</p>
+							</section>
+
+							<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
+								<div class="red-circle">
+									<img src="icons/multiple-users-silhouette.png" style="width: 50px; height: 50px;" />
+								</div>
+								<h3 style="color: black;"><b>3,155,796</b></h3>
+								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>People Reached</b></h3>
+								<p style="color: black; line-height: 1.3; margin-top: 30px;">Community empowerment, community participation, and building resilient households.</p>
+							</section>
+
+							<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
+								<div class="red-circle">
+									<img src="icons/home (1).png" style="width: 50px; height: 50px;" />
+								</div>
+								<h3 style="color: black"><b>403,000</b></h3>
+								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>Resilient Households</b></h3>
+								<p style="color: black; line-height: 1.3; margin-top: 30px;">Promoting sustainable, gender-sensitive agriculture, youth skills, and climate resilience.</p>
+							</section>
+
+							<section style="flex: 1; padding: 20px;">
+								<div class="red-circle">
+									<img src="icons/community.png" style="width: 50px; height: 50px;" />
+								</div>
+								<h3 style="color: black"><b>1,900,000</b></h3>
+								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>Communities</b></h3>
+								<p style="color: black; line-height: 1.3; margin-top: 30px;">Focus on children, youth out of school, orphans, widows, and the Most-at-Risk-Populations.</p>
 							</section>
 						</div>
 					</section>
+				</div>
 			</section>
 
 			<!-- History -->
-			<section style="display: flex; width: 100%; height: 600px; margin-top: -105px">
+			<section style="display: flex; width: 100%; height: 600px; margin-top: -105px; z-index: 30">
 
 				<!-- Left: Placeholder Timeline Image -->
-				<div style="flex: 7; background-color: #B4C8DE; display: flex; justify-content: center; align-items: center;">
+				<div style="flex: 7; background-color: #B4C8DE; display: flex; justify-content: center; align-items: center; z-index: 30">
 				<img src="images/timeline.svg" alt="Timeline" style="width: 100%; height: 100%; display: block; margin: 0 auto;">
 				</div>
 			
 				<!-- Right: Vertical Dark Blue Bar with Rotated Text -->
-				<div style="flex: 1; background-color: #20146F; display: flex; justify-content: center; align-items: center;">
+				<div style="flex: 1; background-color: #20146F; display: flex; justify-content: center; align-items: center; z-index: 30">
 				<h2 style="transform: rotate(-360deg); writing-mode: vertical-lr; color: white; font-size: 80px; font-weight: bold;">OUR HISTORY</h2>
 				</div>
 			
@@ -134,73 +125,59 @@
 				<div style="flex: 1; background-color: #20146F; display: flex; justify-content: center; align-items: center;">
 				<h2 style="transform: rotate(-180deg); writing-mode: vertical-lr; color: white; font-size: 80px; font-weight: bold;">OUR TEAM</h2>
 				</div>
-
-				<!-- Right: Team Members Grid with Images -->
-				<div style="flex: 4.5; background-color: #EBEBD3; display: flex; justify-content: center; align-items: center;">
-					<div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 25px 100px; padding: 80px 40px;">
+			
+				<!-- Right: Team Members Row -->
+				<div style="flex: 7; background-color: #EBEBD3; display: flex; justify-content: center; align-items: center; padding: 60px 40px;">
+				<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; width: 100%;">
 					
 					<!-- Team Member 1 -->
 					<div style="text-align: center;">
-						<img src="https://ui-avatars.com/api/?name=AB&background=4C9E9E&color=fff&rounded=true&size=120" style="width: 160px; height: 160px; border-radius: 50%;" />
-						<p style="margin: 0px 0 0 0; font-weight: bold; color: black">Name</p>
-						<p style="margin: 0;">Position</p>
+						<img src="images/pic05.jpg" 
+							style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
+						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
+						<p style="margin: 0; font-size: 20px">Executive Director</p>
+						<p style="margin: 0; font-size: 20px">kisambirakisirira@gmail.com</p>
 					</div>
-				
+			
 					<!-- Team Member 2 -->
 					<div style="text-align: center;">
-						<img src="https://ui-avatars.com/api/?name=CD&background=4C9E9E&color=fff&rounded=true&size=120" style="width: 160px; height: 160px; border-radius: 50%;" />
-						<p style="margin: 0px 0 0 0; font-weight: bold; color: black">Name</p>
-						<p style="margin: 0;">Position</p>
+						<img src="images/pic05.jpg" 
+							style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
+						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
+						<p style="margin: 0; font-size: 20px">Program Manager</p>
+						<p style="margin: 0; font-size: 20px">kagodahood10@gmail.com</p>
 					</div>
-				
+			
 					<!-- Team Member 3 -->
 					<div style="text-align: center;">
-						<img src="https://ui-avatars.com/api/?name=EF&background=4C9E9E&color=fff&rounded=true&size=120" style="width: 160px; height: 160px; border-radius: 50%;" />
-						<p style="margin: 0px 0 0 0; font-weight: bold; color: black">Name</p>
-						<p style="margin: 0;">Position</p>
+						<img src="images/pic05.jpg"
+						style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
+						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
+						<p style="margin: 0; font-size: 20px">Project Coordinator</p>
+						<p style="margin: 0; font-size: 20px">ojjaytomas15@gmail.com</p>
 					</div>
-				
+			
 					<!-- Team Member 4 -->
 					<div style="text-align: center;">
-						<img src="https://ui-avatars.com/api/?name=GH&background=4C9E9E&color=fff&rounded=true&size=120" style="width: 160px; height: 160px; border-radius: 50%;" />
-						<p style="margin: 0px 0 0 0; font-weight: bold; color: black">Name</p>
-						<p style="margin: 0;">Position</p>
+						<img src="images/pic05.jpg" 
+						style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
+						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
+						<p style="margin: 0; font-size: 20px">Finance & Admin Manager</p>
+						<p style="margin: 0; font-size: 20px">toingala@gmail.com</p>
 					</div>
-				
+			
 					<!-- Team Member 5 -->
 					<div style="text-align: center;">
-						<img src="https://ui-avatars.com/api/?name=IJ&background=4C9E9E&color=fff&rounded=true&size=120" style="width: 160px; height: 160px; border-radius: 50%;" />
-						<p style="margin: 0px 0 0 0; font-weight: bold; color: black">Name</p>
-						<p style="margin: 0;">Position</p>
+						<img src="images/pic05.jpg" 
+						style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
+						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
+						<p style="margin: 0; font-size: 20px">MEAL Manager</p>
+						<p style="margin: 0; font-size: 20px">jbagabirwa@gmail.com</p>
 					</div>
-				
-					</div>
-				</div>  
-				<div style="flex:2.5; background-color:#EBEBD3">
-					<div>
-						<img src="images/staff_pic.jpeg" alt="Team Visual" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);" />
-					</div>
-					<div style="background: white; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); border-radius: 16px; padding: 20px; max-width: 400px; margin-top: 30px">
-						<p>quote from the team</p>
-					</div>
-				</div>	
+			
+				</div>
+				</div>
 			</section>
-
-
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
 
 		</div>
 
