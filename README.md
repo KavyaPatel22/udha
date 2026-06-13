@@ -11,3 +11,4 @@ Website access at kavyapatel22.github.io/udha
     1. Clone this repo over to a new udha github account and pay for GitHub pages to get a custom domain
     2. Host the website on vercel for free. I haven't used this before, but apparently it's pretty easy. The domain will be something like "xxx.vercel.app". You can also pay for a custom domain through vercel.
     - Don't use GitHub pages free tier because it requires the repo to be public. This isn't a big issue, but a bit unprofessional.
+5. Make website mobile friendly
