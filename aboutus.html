@@ -1,216 +1,323 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Uganda Development and Health Associates</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+<html lang="en">
+<head>
+	<title>About Us — Uganda Development and Health Associates</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1>
-					<a href="index.html">
-						<img src="images/udha_logo_withname.png" alt="U.D.H.A." width="200" height="auto" style="margin-top: 10px">
-					</a>
-				</h1>
-				<nav id="nav">
-					<ul>
-						<li><b><a href="index.html">Home</a></b></li>
-						<li><b><a href="ourprojects.html">Our Projects</a></b></li>
-						<li><b><a href="aboutus.html">About Us</a></b></li>
-						<li><b><a href="supportus.html" class="button">Support Us</a></b></li>
-					</ul>
-				</nav>
-			</header>
+	<style>
+		/* ── Reset & Base ──────────────────────────────────────────── */
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', sans-serif; color: #1a2634; background: #fff; line-height: 1.6; }
+		a { text-decoration: none; }
+		img { max-width: 100%; display: block; }
+		ul { list-style: none; }
 
-			<!-- Banner -->
-			<div style="position: relative; width: 100%; overflow: hidden; z-index: 10">
-				<img src="images/children.jpeg" alt="Children" style="width: 100%; height: auto; display: block; transform: translateY(-50px);" />
-				<div style="position: absolute; top: 0; height: 100%; left: 0; width: 70%; z-index: 10;
-							background: linear-gradient(to right, rgba(13, 3, 71, 0.9), rgba(13, 3, 71, 0.6) 40%, rgba(13, 3, 71, 0.3) 70%, rgba(13, 3, 71, 0) 80%);
-							display: flex; align-items: center; padding: 40px 40px 40px 100px;">
-					<section id="banner1" style="max-width: 600px; color: white; text-align: left;">
-					<h1 style="font-weight: bold; font-size: 100px; color: white; margin-top: -200px">ABOUT US</h1>
-					<h3><b><i style="color: white">Rooted in community, committed to change</i></b></h3>
-					</section>
-				</div>
-			</div>
+		/* ── Design Tokens ─────────────────────────────────────────── */
+		:root {
+			--navy:   #20146f;
+			--teal:   #0b7a75;
+			--teal-lt:#e6f4f3;
+			--orange: #df271f;
+			--cream:  #faf7f2;
+			--light:  #f2f5f8;
+			--muted:  #5a6a7a;
+			--border: #e0e7ee;
+		}
 
-			<!--Statistics -->
-			<section id="main" class="container" style="margin-top: -500px">
-				<div class="white-box" style="position: relative; margin-top: -50px; z-index: 40; width: 95%; max-width: 1400px; margin-left: auto; margin-right: auto; 
-						background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 30px;">
-					<section style="width: 100%;">
-						<div class="features-row" 
-							style="display: flex; justify-content: center; align-items: center; text-align: center; gap: 0;">
-							
-							<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
-								<div class="red-circle">
-									<img src="icons/syringe.png" style="width: 50px; height: 50px;" />
-								</div>
-								<h3 style="color: black;"><b>20</b></h3>
-								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>Districts</b></h3>
-								<p style="color: black; line-height: 1.3; margin-top: 30px;">HIV and TB prevention, risk reduction, testing, screening, and community awareness.</p>
-							</section>
+		/* ── Shared Utilities ──────────────────────────────────────── */
+		.section-label {
+			font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+			text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+		}
+		.section-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.4rem; font-weight: 700; color: var(--navy); line-height: 1.2;
+			margin-bottom: 20px;
+		}
 
-							<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
-								<div class="red-circle">
-									<img src="icons/multiple-users-silhouette.png" style="width: 50px; height: 50px;" />
-								</div>
-								<h3 style="color: black;"><b>3,155,796</b></h3>
-								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>People Reached</b></h3>
-								<p style="color: black; line-height: 1.3; margin-top: 30px;">Community empowerment, community participation, and building resilient households.</p>
-							</section>
+		/* ── Header ────────────────────────────────────────────────── */
+		.site-header {
+			position: sticky; top: 0; z-index: 200;
+			background: #fff; border-bottom: 1px solid var(--border);
+			display: flex; align-items: center; justify-content: space-between;
+			padding: 0 64px; height: 72px;
+		}
+		.logo img { height: 46px; }
+		.site-nav ul { display: flex; gap: 4px; align-items: center; }
+		.site-nav a {
+			color: #1a2634; font-weight: 500; font-size: 0.92rem;
+			padding: 8px 14px; border-radius: 6px; transition: all 0.18s;
+		}
+		.site-nav a:hover { background: var(--light); color: var(--teal); }
+		.site-nav .nav-donate {
+			background: var(--orange); color: #fff !important;
+			padding: 10px 22px; margin-left: 8px;
+		}
+		.site-nav .nav-donate:hover { background: #b51e18; }
 
-							<section style="flex: 1; padding: 20px; border-right: 2px solid rgba(0, 0, 0, 0.1);">
-								<div class="red-circle">
-									<img src="icons/home (1).png" style="width: 50px; height: 50px;" />
-								</div>
-								<h3 style="color: black"><b>403,000</b></h3>
-								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>Resilient Households</b></h3>
-								<p style="color: black; line-height: 1.3; margin-top: 30px;">Promoting sustainable, gender-sensitive agriculture, youth skills, and climate resilience.</p>
-							</section>
+		/* ── Hero ──────────────────────────────────────────────────── */
+		.hero {
+			position: relative; height: 440px;
+			display: flex; align-items: flex-end;
+			background: var(--navy); overflow: hidden;
+		}
+		.hero-bg {
+			position: absolute; inset: 0;
+			background: url('images/children.jpeg') center 30%/cover no-repeat;
+			opacity: 0.28;
+		}
+		.hero-content {
+			position: relative; z-index: 1;
+			padding: 0 64px 64px;
+		}
+		.hero-tag {
+			display: inline-block; background: var(--teal); color: #fff;
+			font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+			text-transform: uppercase; padding: 6px 14px; border-radius: 4px;
+			margin-bottom: 20px;
+		}
+		.hero h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 3.75rem; font-weight: 700; color: #fff; line-height: 1.1;
+			margin-bottom: 12px;
+		}
+		.hero p { font-size: 1.1rem; color: rgba(255,255,255,0.72); font-style: italic; }
 
-							<section style="flex: 1; padding: 20px;">
-								<div class="red-circle">
-									<img src="icons/community.png" style="width: 50px; height: 50px;" />
-								</div>
-								<h3 style="color: black"><b>1,900,000</b></h3>
-								<h3 style="margin-top: -15px; font-size: 23px; color: black;"><b>Communities</b></h3>
-								<p style="color: black; line-height: 1.3; margin-top: 30px;">Focus on children, youth out of school, orphans, widows, and the Most-at-Risk-Populations.</p>
-							</section>
-						</div>
-					</section>
-				</div>
-			</section>
+		/* ── Stats ─────────────────────────────────────────────────── */
+		.stats-section { padding: 80px 64px; background: #fff; }
+		.stats-grid {
+			display: grid; grid-template-columns: repeat(4, 1fr);
+			border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+			max-width: 1200px; margin: 0 auto;
+		}
+		.stat-card {
+			padding: 48px 28px; text-align: center;
+			border-right: 1px solid var(--border);
+		}
+		.stat-card:last-child { border-right: none; }
+		.stat-icon {
+			width: 60px; height: 60px; border-radius: 50%;
+			background: var(--teal-lt); display: flex; align-items: center;
+			justify-content: center; margin: 0 auto 20px;
+		}
+		.stat-icon img { width: 28px; height: 28px; }
+		.stat-number {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.4rem; font-weight: 700; color: var(--navy);
+			line-height: 1; margin-bottom: 8px; display: block;
+		}
+		.stat-label { font-size: 0.95rem; font-weight: 600; color: #1a2634; margin-bottom: 14px; }
+		.stat-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
-			<!-- History -->
-			<section style="display: flex; width: 100%; height: 600px; margin-top: -105px; z-index: 30">
+		/* ── History ───────────────────────────────────────────────── */
+		.history-section { display: flex; height: 560px; }
+		.history-img {
+			flex: 7; background: #759fbc;
+			display: flex; align-items: center; justify-content: center; overflow: hidden;
+		}
+		.history-img img { width: 100%; height: 100%; object-fit: contain; padding: 24px; }
+		.history-panel {
+			width: 300px; background: var(--navy);
+			display: flex; flex-direction: column; justify-content: center;
+			padding: 56px 48px;
+		}
+		.history-panel .section-label { color: rgba(255,255,255,0.5); }
+		.history-panel .section-title { color: #fff; font-size: 2rem; margin-bottom: 16px; }
+		.history-panel p { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.75; }
 
-				<!-- Left: Timeline Image -->
-				<div style="flex: 7; background-color: #B4C8DE; display: flex; justify-content: center; align-items: center; z-index: 30">
-				<img src="images/timeline.svg" alt="Timeline" style="width: 100%; height: 100%; display: block; margin: 0 auto;">
-				</div>
-			
-				<!-- Right: Vertical Dark Blue Bar with Rotated Text -->
-				<div style="flex: 1; background-color: #20146F; display: flex; justify-content: center; align-items: center; z-index: 30">
-				<h2 style="transform: rotate(-360deg); writing-mode: vertical-lr; color: white; font-size: 80px; font-weight: bold;">OUR HISTORY</h2>
-				</div>
-			
-			</section>
+		/* ── Team ──────────────────────────────────────────────────── */
+		.team-section { padding: 100px 64px; background: var(--cream); }
+		.team-header { text-align: center; margin-bottom: 56px; }
+		.team-header .section-title { margin-bottom: 0; }
+		.team-grid {
+			display: grid; grid-template-columns: repeat(5, 1fr);
+			gap: 28px; max-width: 1200px; margin: 0 auto;
+		}
+		.team-card { text-align: center; }
+		.team-photo {
+			width: 100%; aspect-ratio: 3/4; object-fit: cover;
+			border-radius: 14px; margin-bottom: 16px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+		}
+		.team-name {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 5px;
+		}
+		.team-role {
+			font-size: 0.75rem; font-weight: 700; color: var(--teal);
+			text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;
+		}
+		.team-email { font-size: 0.8rem; color: var(--muted); }
 
-			<!-- Our Team -->
-			<section style="display: flex; width: 100%; height: 600px;">
-				<!-- Left: Vertical Dark Blue Bar with Rotated Text -->
-				<div style="flex: 1; background-color: #20146F; display: flex; justify-content: center; align-items: center;">
-				<h2 style="transform: rotate(-180deg); writing-mode: vertical-lr; color: white; font-size: 80px; font-weight: bold;">OUR TEAM</h2>
-				</div>
-			
-				<!-- Right: Team Members Row -->
-				<div style="flex: 7; background-color: #EBEBD3; display: flex; justify-content: center; align-items: center; padding: 60px 40px;">
-				<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; width: 100%;">
-					
-					<!-- Team Member 1 -->
-					<div style="text-align: center;">
-						<img src="images/pic05.jpg" 
-							style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
-						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
-						<p style="margin: 0; font-size: 20px">Executive Director</p>
-						<p style="margin: 0; font-size: 20px">kisambirakisirira@gmail.com</p>
-					</div>
-			
-					<!-- Team Member 2 -->
-					<div style="text-align: center;">
-						<img src="images/pic05.jpg" 
-							style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
-						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
-						<p style="margin: 0; font-size: 20px">Program Manager</p>
-						<p style="margin: 0; font-size: 20px">kagodahood10@gmail.com</p>
-					</div>
-			
-					<!-- Team Member 3 -->
-					<div style="text-align: center;">
-						<img src="images/pic05.jpg"
-						style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
-						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
-						<p style="margin: 0; font-size: 20px">Project Coordinator</p>
-						<p style="margin: 0; font-size: 20px">ojjaytomas15@gmail.com</p>
-					</div>
-			
-					<!-- Team Member 4 -->
-					<div style="text-align: center;">
-						<img src="images/pic05.jpg" 
-						style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
-						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
-						<p style="margin: 0; font-size: 20px">Finance & Admin Manager</p>
-						<p style="margin: 0; font-size: 20px">toingala@gmail.com</p>
-					</div>
-			
-					<!-- Team Member 5 -->
-					<div style="text-align: center;">
-						<img src="images/pic05.jpg" 
-						style="width: 200px; height: 360px; object-fit: cover; border-radius: 20px;" />
-						<p style="margin: 10px 0 0 0; font-weight: bold; color: black; font-size: 35px">Name</p>
-						<p style="margin: 0; font-size: 20px">MEAL Manager</p>
-						<p style="margin: 0; font-size: 20px">jbagabirwa@gmail.com</p>
-					</div>
-			
-				</div>
-				</div>
-			</section>
+		/* ── Footer ────────────────────────────────────────────────── */
+		.site-footer { background: var(--navy); padding: 72px 64px 40px; }
+		.footer-grid {
+			display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px;
+			padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1);
+		}
+		.footer-brand img { height: 40px; margin-bottom: 18px; }
+		.footer-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.8; max-width: 300px; }
+		.footer-col h4 {
+			color: #fff; font-weight: 600; font-size: 0.78rem;
+			text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;
+		}
+		.footer-col li { margin-bottom: 10px; }
+		.footer-col a { color: rgba(255,255,255,0.62); font-size: 0.9rem; transition: color 0.18s; }
+		.footer-col a:hover { color: #fff; }
+		.footer-col p { color: rgba(255,255,255,0.62); font-size: 0.9rem; margin-bottom: 8px; }
+		.footer-bottom {
+			display: flex; justify-content: space-between; align-items: center; padding-top: 32px;
+		}
+		.footer-bottom p { color: rgba(255,255,255,0.38); font-size: 0.82rem; }
+		.social-icons { display: flex; gap: 18px; }
+		.social-icons a { color: rgba(255,255,255,0.58); font-size: 1.05rem; transition: color 0.18s; }
+		.social-icons a:hover { color: #fff; }
+	</style>
+</head>
+<body>
 
+	<!-- Header -->
+	<header class="site-header">
+		<a href="index.html" class="logo">
+			<img src="images/udha_logo_withname.png" alt="UDHA" />
+		</a>
+		<nav class="site-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="ourprojects.html">Our Projects</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="supportus.html" class="nav-donate">Support Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Hero -->
+	<section class="hero">
+		<div class="hero-bg"></div>
+		<div class="hero-content">
+			<h1>About Us</h1>
+			<p>Rooted in community, committed to change</p>
 		</div>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Stats -->
+	<section class="stats-section">
+		<div class="stats-grid">
+			<div class="stat-card">
+				<div class="stat-icon"><img src="icons/syringe.png" alt="" /></div>
+				<span class="stat-number">20</span>
+				<p class="stat-label">Districts</p>
+				<p class="stat-desc">HIV and TB prevention, risk reduction, testing, screening, and community awareness.</p>
+			</div>
+			<div class="stat-card">
+				<div class="stat-icon"><img src="icons/multiple-users-silhouette.png" alt="" /></div>
+				<span class="stat-number">3,155,796</span>
+				<p class="stat-label">People Reached</p>
+				<p class="stat-desc">Community empowerment, community participation, and building resilient households.</p>
+			</div>
+			<div class="stat-card">
+				<div class="stat-icon"><img src="icons/home (1).png" alt="" /></div>
+				<span class="stat-number">403,000</span>
+				<p class="stat-label">Resilient Households</p>
+				<p class="stat-desc">Promoting sustainable, gender-sensitive agriculture, youth skills, and climate resilience.</p>
+			</div>
+			<div class="stat-card">
+				<div class="stat-icon"><img src="icons/community.png" alt="" /></div>
+				<span class="stat-number">1,900,000</span>
+				<p class="stat-label">Communities</p>
+				<p class="stat-desc">Focus on children, youth out of school, orphans, widows, and the Most-at-Risk-Populations.</p>
+			</div>
+		</div>
+	</section>
 
-		<!-- Foooter -->
-		<footer style="background-color: #05a8aa; padding: 40px 20px; display: flex; flex-direction: column; align-items: center;">
+	<!-- History -->
+	<div class="history-section">
+		<div class="history-img">
+			<img src="images/timeline.svg" alt="UDHA History Timeline" />
+		</div>
+		<div class="history-panel">
+			<p class="section-label">Since 2003</p>
+			<h2 class="section-title">Our History</h2>
+			<p>Two decades of community-led growth, partnership, and lasting impact across Uganda.</p>
+		</div>
+	</div>
 
-			<!-- Wrap the two lists in a container -->
-			<div style="display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%;">
-				<div style="flex: 1; min-width: 200px; transform: translateX(90px);">
-				<h3 style="color: white;">Sitemap</h3>
-				<ul style="list-style: none; padding: 0; margin: 0;">
-					<li style = "padding: 0;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-					<li style = "padding: 0;"><a href="ourprojects.html" style="color: white; text-decoration: none;">Our Projects</a></li>
-					<li style = "padding: 0;"><a href="aboutus.html" style="color: white; text-decoration: none;">About Us</a></li>
-					<li style = "padding: 0;"><a href="supportus.html" style="color: white; text-decoration: none;">Support Us</a></li>
+	<!-- Team -->
+	<section class="team-section">
+		<div class="team-header">
+			<h2 class="section-title">Our Team</h2>
+		</div>
+		<div class="team-grid">
+			<div class="team-card">
+				<img src="images/pic05.jpg" alt="Executive Director" class="team-photo" />
+				<p class="team-name">Name</p>
+				<p class="team-role">Executive Director</p>
+				<p class="team-email">kisambirakisirira@gmail.com</p>
+			</div>
+			<div class="team-card">
+				<img src="images/pic05.jpg" alt="Program Manager" class="team-photo" />
+				<p class="team-name">Name</p>
+				<p class="team-role">Program Manager</p>
+				<p class="team-email">kagodahood10@gmail.com</p>
+			</div>
+			<div class="team-card">
+				<img src="images/pic05.jpg" alt="Project Coordinator" class="team-photo" />
+				<p class="team-name">Name</p>
+				<p class="team-role">Project Coordinator</p>
+				<p class="team-email">ojjaytomas15@gmail.com</p>
+			</div>
+			<div class="team-card">
+				<img src="images/pic05.jpg" alt="Finance & Admin Manager" class="team-photo" />
+				<p class="team-name">Name</p>
+				<p class="team-role">Finance &amp; Admin Manager</p>
+				<p class="team-email">toingala@gmail.com</p>
+			</div>
+			<div class="team-card">
+				<img src="images/pic05.jpg" alt="MEAL Manager" class="team-photo" />
+				<p class="team-name">Name</p>
+				<p class="team-role">MEAL Manager</p>
+				<p class="team-email">jbagabirwa@gmail.com</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer">
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<img src="images/udha_logo_withname.png" alt="UDHA" />
+				<p>Uganda Development and Health Associates is a nonprofit dedicated to improving health outcomes and fostering sustainable development in Ugandan communities.</p>
+			</div>
+			<div class="footer-col">
+				<h4>Sitemap</h4>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="ourprojects.html">Our Projects</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="supportus.html">Support Us</a></li>
 				</ul>
-				</div>
-
-				<div style="flex: 1; min-width: 200px;">
-					<h3 style="color: white;">Uganda Development and Health Associates</h3>
-					<ul style="list-style: none; padding: 0; margin: 0;">
-						<li style="color: white; padding: 0;">Address: PO BOX/ADDRESS</li>
-						<li style="color: white; padding: 0;">Phone: PHONE NUMBER</li>
-						<li style="color: white; padding: 0;">Email: EMAIL</li>	
-					</ul>
-					<a href="https://www.omprakash.org/global/uganda-development-and-health-associates" style="color: white; z-index: 10; position: relative;">Omprakash</a>
-				</div>
 			</div>
-
-			<!-- Social Media Icons BELOW the columns -->
-			<div style="margin-top: 30px; display: flex; justify-content: center; gap: 60px;">
-				<a href="https://www.facebook.com/udha.uganda/about/?_rdr" target="_blank" style="color: white; font-size: 24px;">
-					<i class="fab fa-facebook-f"></i>
-				</a>
-				<a href="https://www.instagram.com/u.d.h.a/" target="_blank" style="color: white; font-size: 24px;">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a href="https://www.linkedin.com/company/ugandadevelopment-and-healthassociates/" target="_blank" style="color: white; font-size: 24px;">
-					<i class="fab fa-linkedin-in"></i>
-				</a>
+			<div class="footer-col">
+				<h4>Contact</h4>
+				<p>Address: PO BOX/ADDRESS</p>
+				<p>Phone: PHONE NUMBER</p>
+				<p>Email: EMAIL</p>
+				<a href="https://www.omprakash.org/global/uganda-development-and-health-associates">Omprakash Profile</a>
 			</div>
-		</footer>
-	</body>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 Uganda Development and Health Associates</p>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/udha.uganda/about/?_rdr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/u.d.h.a/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.linkedin.com/company/ugandadevelopment-and-healthassociates/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+		</div>
+	</footer>
+
+</body>
 </html>

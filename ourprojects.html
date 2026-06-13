@@ -1,277 +1,300 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Uganda Development and Health Associates</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+<html lang="en">
+<head>
+	<title>Our Projects — Uganda Development and Health Associates</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1>
-					<a href="index.html">
-						<img src="images/udha_logo_withname.png" alt="U.D.H.A." width="200" height="auto" style="margin-top: 10px">
-					</a>
-				</h1>
-				<nav id="nav">
-					<ul>
-						<li><b><a href="index.html">Home</a></b></li>
-						<li><b><a href="ourprojects.html">Our Projects</a></b></li>
-						<li><b><a href="aboutus.html">About Us</a></b></li>
-						<li><b><a href="supportus.html" class="button">Support Us</a></b></li>
-					</ul>
-				</nav>
-			</header>
+	<style>
+		/* ── Reset & Base ──────────────────────────────────────────── */
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', sans-serif; color: #1a2634; background: #fff; line-height: 1.6; }
+		a { text-decoration: none; }
+		img { max-width: 100%; display: block; }
+		ul { list-style: none; }
 
-			<!-- Banner -->
-			<div style="position: relative; width: 100%; overflow: hidden; z-index: 10">
-				<!-- REPLACE IMAGE WITH AN UDHA IMAGE -->
-				<img src="images/bill-wegener-7MD4DR9jbP0-unsplash.jpg" style="width: 100%; height: auto; display: block; transform: translateY(-50px);" />
+		/* ── Design Tokens ─────────────────────────────────────────── */
+		:root {
+			--navy:   #20146f;
+			--teal:   #0b7a75;
+			--orange: #df271f;
+			--cream:  #faf7f2;
+			--light:  #f2f5f8;
+			--muted:  #5a6a7a;
+			--border: #e0e7ee;
+		}
 
-				<!-- Overlay with text -->
-				<div style="position: absolute; top: 0; height: 100%; left: 0; width: 70%; z-index: 10;
-							background: linear-gradient(to right, rgba(13, 3, 71, 0.9), rgba(13, 3, 71, 0.6) 40%, rgba(13, 3, 71, 0.3) 70%, rgba(13, 3, 71, 0) 80%);
-							display: flex; align-items: center; padding: 40px 40px 40px 100px;">
-					<section id="banner1" style="max-width: 600px; color: white; text-align: left;">
-					<h1 style="font-weight: bold; font-size: 100px; color: white; line-height: 100px; margin-top: -200px;">OUR PROJECTS</h1>
-					<h3><b><i style="color: white">Where health, empowerment, and innovation meet</i></b></h3>
-					</section>
-				</div>
-			</div>
+		/* ── Shared Utilities ──────────────────────────────────────── */
+		.section-label {
+			font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+			text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+		}
+		.section-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.4rem; font-weight: 700; color: var(--navy); line-height: 1.2;
+			margin-bottom: 20px;
+		}
 
+		/* ── Header ────────────────────────────────────────────────── */
+		.site-header {
+			position: sticky; top: 0; z-index: 200;
+			background: #fff; border-bottom: 1px solid var(--border);
+			display: flex; align-items: center; justify-content: space-between;
+			padding: 0 64px; height: 72px;
+		}
+		.logo img { height: 46px; }
+		.site-nav ul { display: flex; gap: 4px; align-items: center; }
+		.site-nav a {
+			color: #1a2634; font-weight: 500; font-size: 0.92rem;
+			padding: 8px 14px; border-radius: 6px; transition: all 0.18s;
+		}
+		.site-nav a:hover { background: var(--light); color: var(--teal); }
+		.site-nav .nav-donate {
+			background: var(--orange); color: #fff !important;
+			padding: 10px 22px; margin-left: 8px;
+		}
+		.site-nav .nav-donate:hover { background: #b51e18; }
+
+		/* ── Hero ──────────────────────────────────────────────────── */
+		.hero {
+			position: relative; height: 440px;
+			display: flex; align-items: flex-end;
+			background: var(--navy); overflow: hidden;
+		}
+		.hero-bg {
+			position: absolute; inset: 0;
+			background: url('images/bill-wegener-7MD4DR9jbP0-unsplash.jpg') center 40%/cover no-repeat;
+			opacity: 0.28;
+		}
+		.hero-content {
+			position: relative; z-index: 1;
+			padding: 0 64px 64px;
+		}
+		.hero-tag {
+			display: inline-block; background: var(--teal); color: #fff;
+			font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+			text-transform: uppercase; padding: 6px 14px; border-radius: 4px;
+			margin-bottom: 20px;
+		}
+		.hero h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 3.75rem; font-weight: 700; color: #fff; line-height: 1.1;
+			margin-bottom: 12px;
+		}
+		.hero p { font-size: 1.1rem; color: rgba(255,255,255,0.72); font-style: italic; }
+
+		/* ── Project Quick Nav ─────────────────────────────────────── */
+		.project-nav {
+			background: var(--navy); padding: 28px 64px;
+			display: flex; flex-wrap: wrap; gap: 10px;
+		}
+		.project-nav a {
+			color: rgba(255,255,255,0.8); font-size: 0.84rem; font-weight: 500;
+			padding: 8px 18px; border-radius: 100px;
+			border: 1px solid rgba(255,255,255,0.2);
+			background: rgba(255,255,255,0.08); transition: all 0.18s;
+		}
+		.project-nav a:hover { background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.45); }
+
+		/* ── Project Rows ──────────────────────────────────────────── */
+		.project-row { display: flex; min-height: 500px; }
+		.project-text {
+			flex: 5; display: flex; flex-direction: column; justify-content: center;
+			padding: 72px 64px; background: var(--cream);
+		}
+		.project-text p { font-size: 1.05rem; color: var(--muted); line-height: 1.85; }
+		.project-img { flex: 4; overflow: hidden; }
+		.project-img img { width: 100%; height: 100%; object-fit: cover; }
+
+		/* Dark/reversed variant */
+		.project-row.alt { flex-direction: row-reverse; }
+		.project-row.alt .project-text { background: var(--navy); }
+		.project-row.alt .section-label { color: rgba(255,255,255,0.5); }
+		.project-row.alt .section-title { color: #fff; }
+		.project-row.alt .project-text p { color: rgba(255,255,255,0.72); }
+
+		/* ── Footer ────────────────────────────────────────────────── */
+		.site-footer { background: var(--navy); padding: 72px 64px 40px; }
+		.footer-grid {
+			display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px;
+			padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1);
+		}
+		.footer-brand img { height: 40px; margin-bottom: 18px; }
+		.footer-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.8; max-width: 300px; }
+		.footer-col h4 {
+			color: #fff; font-weight: 600; font-size: 0.78rem;
+			text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;
+		}
+		.footer-col li { margin-bottom: 10px; }
+		.footer-col a { color: rgba(255,255,255,0.62); font-size: 0.9rem; transition: color 0.18s; }
+		.footer-col a:hover { color: #fff; }
+		.footer-col p { color: rgba(255,255,255,0.62); font-size: 0.9rem; margin-bottom: 8px; }
+		.footer-bottom {
+			display: flex; justify-content: space-between; align-items: center; padding-top: 32px;
+		}
+		.footer-bottom p { color: rgba(255,255,255,0.38); font-size: 0.82rem; }
+		.social-icons { display: flex; gap: 18px; }
+		.social-icons a { color: rgba(255,255,255,0.58); font-size: 1.05rem; transition: color 0.18s; }
+		.social-icons a:hover { color: #fff; }
+	</style>
+</head>
+<body>
+
+	<!-- Header -->
+	<header class="site-header">
+		<a href="index.html" class="logo">
+			<img src="images/udha_logo_withname.png" alt="UDHA" />
+		</a>
+		<nav class="site-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="ourprojects.html">Our Projects</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="supportus.html" class="nav-donate">Support Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Hero -->
+	<section class="hero">
+		<div class="hero-bg"></div>
+		<div class="hero-content">
+			<h1>Our Projects</h1>
+			<p>Where health, empowerment, and innovation meet</p>
 		</div>
+	</section>
 
-		<!-- Project Links -->
-		<section style="position: relative; z-index: 40; background-color: #B4C8DE; padding: 60px 40px; width: 100%; margin-top: -100px;">
+	<!-- Project Quick Nav -->
+	<nav class="project-nav">
+		<a href="#project1">TB, HIV/AIDS</a>
+		<a href="#project2">Innovation Camps</a>
+		<a href="#project3">Rural Health Empowerment</a>
+		<a href="#project4">Iganga Youth Resource Center</a>
+		<a href="#project5">Naigobya, Nkono &amp; Maina Health Centers</a>
+		<a href="#project6">Naigobya Technical Institute</a>
+		<a href="#project7">Volunteer Initiative</a>
+	</nav>
 
-			<div style="
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			gap: 40px;
-			justify-items: center;
-			max-width: 1400px;
-			margin: 0 auto;
-			">
-		
-				<!-- Top 4 Boxes -->
-				<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: nowrap; padding: 50px; margin-top: -40px">
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-					  <button onclick="location.href='#tb-hiv'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; cursor: pointer;">
-						TB, HIV/AIDS
-					  </button>
-					</div>
-					
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-						<button onclick="location.href='#inno-camps'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; cursor: pointer;">
-						Innovation Camps
-						</button>
-					</div>
-					
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-						<button onclick="location.href='#rural'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; cursor: pointer;">
-						Rural Health Empowerment
-						</button>
-					</div>
-					
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-						<button onclick="location.href='#iganga'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; cursor: pointer;">
-						Iganga Youth Resource Center
-						</button>
-					</div>
-				</div>				  
-			
-				<!-- Bottom 3 Centered -->
-				<div style="grid-column: span 4; display: flex; justify-content: flex-start; gap: 70px; padding-left: -200px;">
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-					  <button onclick="location.href='#nnm'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; margin: 0; cursor: pointer; text-align: center;">
-						Naigobya, Nkono and Maina Health Centers
-					  </button>
-					</div>
-				  
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-					  <button onclick="location.href='#n-tech'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; margin: 0; cursor: pointer; text-align: center;">
-						Naigobya Technical Institute
-					  </button>
-					</div>
-				  
-					<div style="width: 300px; height: 120px; background: #20146F; border-radius: 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);">
-					  <button onclick="location.href='#volunteer'" style="color: #EBEBD3; background: none; border: none; font-weight: bold; font-size: 24px; margin: 0; cursor: pointer; text-align: center;">
-						UDHA Volunteer Initiative
-					  </button>
-					</div>
-				</div>				  
-		
+	<!-- Project 1 -->
+	<section id="project1" class="project-row">
+		<div class="project-text">
+			<p class="section-label">Project 01</p>
+			<h2 class="section-title">TB, HIV/AIDS Project</h2>
+			<p>Since its initiation, UDHA has operated a number of HIV/AIDS-related projects including the Orphaned Vulnerable Children project in Mayuge and the rest in the Iganga and Luuka districts. We aim to provide access to care, treatment, and support. With a strong network with the local government and other development partners such as TASO and the Global Fund, we provide services like HCT, TB screening and testing, prevention mechanisms through the ABC+ model, and biomedical prevention through other health service providers.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="TB and HIV/AIDS Initiative" />
+		</div>
+	</section>
+
+	<!-- Project 2 -->
+	<section id="project2" class="project-row alt">
+		<div class="project-text">
+			<p class="section-label">Project 02</p>
+			<h2 class="section-title">Innovation Camps Project</h2>
+			<p>Recently, UDHA has had the privilege to connect to young mothers through the support of multiple development partners. The aim is to reach out to young mothers in the Luuka and Iganga districts that previously left schooling to care for their new child and teach them profitable trades such as hairdressing, sewing, and baking so that they can provide for their new family.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="Innovation Camps Project" />
+		</div>
+	</section>
+
+	<!-- Project 3 -->
+	<section id="project3" class="project-row">
+		<div class="project-text">
+			<p class="section-label">Project 03</p>
+			<h2 class="section-title">Rural Health Empowerment Project</h2>
+			<p>In a partnership with GlobeMed at Washington University in St. Louis in 2010, we initiated a community-based nutrition program for children and young mothers in the Luuka and Iganga Districts. This included a selected team of volunteers to carry out growth monitoring and promoting, as well as encourage backyard farming through village demonstration gardens. Over time, this developed to also encompass ante and postnatal care in Naigoyba Health Center III. These health centers provide maternity services, immunizations, and nutritional supplements geared to preventing malnutrition in young children and new mothers. Along with the dedicated health staff, Community Health Workers (CHWs) also contribute to home visits, providing care and maternal health information from village to village for those that cannot access hospital resources.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="Rural Health Empowerment" />
+		</div>
+	</section>
+
+	<!-- Project 4 -->
+	<section id="project4" class="project-row alt">
+		<div class="project-text">
+			<p class="section-label">Project 04</p>
+			<h2 class="section-title">Iganga Youth Resource Center</h2>
+			<p>Since its establishment in 2003, UDHA operates and runs a youth resource center with the support of development partners like GlobeMed to provide youth-friendly services and a resource center. We have reached over 50,000 youths in Iganga and Luuka Districts through activities that include: reproductive education outreach, menstrual destigmatization and distribution of reusable pads to young women and girls, guidance counseling, peer mentorship, HIV counseling and testing, income generation activities, music and dance.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="Iganga Youth Resource Center" />
+		</div>
+	</section>
+
+	<!-- Project 5 -->
+	<section id="project5" class="project-row">
+		<div class="project-text">
+			<p class="section-label">Project 05</p>
+			<h2 class="section-title">Naigobya, Nkono and Maina Health Centers</h2>
+			<p>We strive to ensure that access to health is achieved as stated in the MDGs — it is our mandate as UDHA to ensure that communities access and demand health services as a right. At our health centers, we provide services including maternity, laboratory, admissions, outpatient services, and general clinical care and education. We also organize and offer free services during our 'visiting doctors program'.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="Naigobya, Nkono and Maina Health Centers" />
+		</div>
+	</section>
+
+	<!-- Project 6 -->
+	<section id="project6" class="project-row alt">
+		<div class="project-text">
+			<p class="section-label">Project 06</p>
+			<h2 class="section-title">Naigobya Technical Institute</h2>
+			<p>UDHA is committed to literacy building in communities. Naigobya Technical Institute is registered with the Uganda Private Vocational Institutions Association (UGAPRIVI). The institute provides students with both academic education and technical skills in carpentry, building, bricklaying, and tailoring. Since its inception, over 1,000 technicians have been trained in different trades. The school accommodates 10–20 students and carries out agriculture on its 25-acre facility, also serving as a community platform for sensitization and outreach.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="Naigobya Technical Institute" />
+		</div>
+	</section>
+
+	<!-- Project 7 -->
+	<section id="project7" class="project-row">
+		<div class="project-text">
+			<p class="section-label">Project 07</p>
+			<h2 class="section-title">UDHA Volunteer Initiative</h2>
+			<p>Since its initiation, UDHA has maintained a strong volunteer program that includes both national and international volunteers. We believe in improving our competence with both technical and student volunteers. UDHA has worked with over 100 volunteers nationally and internationally, and also runs an internship program for university students at different times of the year.</p>
+		</div>
+		<div class="project-img">
+			<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg" alt="UDHA Volunteer Initiative" />
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer">
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<img src="images/udha_logo_withname.png" alt="UDHA" />
+				<p>Uganda Development and Health Associates is a nonprofit dedicated to improving health outcomes and fostering sustainable development in Ugandan communities.</p>
 			</div>
-		</section>  
-
-		<!-- Project 1 -->
-		<section id="project1" style="display: flex; width: 100%; height: 600px; margin-top: -105px; z-index: 30; color: #EBEBD3;">
-  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #EBEBD3; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;" id="tb-hiv">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 180px; font-weight: bold; color: black;">TB, HIV/AIDS Project</h1>
-				<p style="color: black; margin-top: 50px; font-size: 25px">Since its initiation, UDHA has operated a number of HIV/AIDS-related projects including the Orphaned Vulnerable Children project in Mayuge and the rest in the Iganga and Luuka districts. We aim to provide access to care, treatment, and support. With a strong network with the local government and other development partners such as TASO and the Global Fund, we provide services like HCT, TB screening, and testing, prevention mechanisms through the ABC+ model, and biomedical prevention through other health service providers.</p>
-			</div>
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-  
-  		</section>
-
-		<!-- Project 2 -->
-		<section id = "project2" style="display: flex; width: 100%; height: 600px; z-index: 30; color: #20146F;">
-			
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;" id="inno-camps">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #20146F; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 120px; font-weight: bold; color: #EBEBD3;">Innovation Camps Project</h1>
-				<p style="color: #EBEBD3; margin-top: 50px; font-size: 25px">Recently, UDHA has had the privilege to connect to young mothers through the support of multiple development partners. The aim is to reach out to young mothers in the Luuka and Iganga districts that previously left schooling to care for their new child and teach them profitable trades such as hairdressing, sewing, and baking so that they can provide for their new family. </p>
-			</div>
-  
-  		</section>
-
-		<!-- Project 3 -->
-		<section id = "project3" style="display: flex; width: 100%; z-index: 30; color: #EBEBD3;">
-  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #EBEBD3; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;" id="rural">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 50px; line-height: 60px; font-weight: bold; color: black;">Rural Health Empowerment Project</h1>
-				<p style="color: black; margin-top: 50px; font-size: 25px">In a partnership with GlobeMed at Washington University in St. Louis in 2010, we initiated a community-based nutrition program for children and young mothers in the Luuka and Iganga Districts. This included a selected team of volunteers to carry out growth monitoring and promoting, as well as encourage backyard farming through village demonstration gardens. Over time, this developed to also encompass ante and postnatal care in Naigoyba Health Center III. These health centers provide maternity services, immunizations, and nutritional supplements geared to preventing malnutrition in young children and new mothers as well as the local population. Along with the dedicated health staff, Community Health Workers (CHWs) also contribute to home visits, providing care and maternal health information from village to village for those that cannot access hospital resources. </p>
-			</div>
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-  
-  		</section>
-
-		<!-- Project 4 -->
-		<section id = "project4" style="display: flex; width: 100%; height: 600px; z-index: 30; color: #20146F;">
-			
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #20146F; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;" id="iganga">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 120px; font-weight: bold; color: #EBEBD3;">Iganga Youth Resource Center</h1>
-				<p style="color: #EBEBD3; margin-top: 50px; font-size: 25px">Since its establishment in 2003, UDHA operates and runs a youth resource center with the support of development partners like Globemed to provide youth-friendly services to the youth and a resource center. We have reached over 50,000 youths in Iganga and Luuka Districts through our activities that include: reproductive education outreach, menstrual destigmatizations and distribution of reusable pads to young women and girls, guidance counseling, peer mentorship, HIV counseling and testing, income generation activities, music and dance.</p>
-			</div>
-  
-  		</section>
-
-		<!-- Project 5 -->
-		<section id = "project5" style="display: flex; width: 100%; z-index: 30; color: #EBEBD3;">
-  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #EBEBD3; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;" id="nnm">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 50px; line-height: 60px; font-weight: bold; color: black;">Naigobya, Nkono and Maina Health Centers</h1>
-				<p style="color: black; margin-top: 50px; font-size: 25px">We strive to see that access to health is achieved as stated in MDGs, it's our mandate as UDHA to see to it that communities access and demand for health services as a right. It's in this endeavor that UDHA provides health care to rural and urban communities. At our health centers, we provide services like maternity, laboratory, admissions, outpatient services, and general clinical care and education. We also organize and offer free services during our ‘visiting doctors program’.</p>
-			</div>
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-  
-  		</section>
-
-		<!-- Project 6 -->
-		<section id = "project6" style="display: flex; width: 100%; height: 600px; z-index: 30; color: #20146F;">
-			
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #20146F; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;" id="n-tech">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 120px; font-weight: bold; color: #EBEBD3;">Naigobya Technical Institute</h1>
-				<p style="color: #EBEBD3; margin-top: 50px; font-size: 25px">UDHA is committed to literacy building in communities. Naigobya technical institute is registered with the Uganda Private Vocational Institutions Association (UGAPRIVI). The institute provides students with both academic education and technical skills in carpentry, building, bricklaying, and tailoring. Since its inception over 1000 technicians in different trades including building, carpentry, and tailoring. The school accommodates 10-20 students. They also carry out Agriculture since the school facility owns 25 acres of land. The school also acts as a community platform where the community convenes for sensitization.</p>
-			</div>
-  
-  		</section>
-
-		<!-- Project 7 -->
-		<section id = "project7" style="display: flex; width: 100%; z-index: 30; color: #EBEBD3;">
-  
-			<!-- Left: Project Details -->
-			<div style="flex: 4; background-color: #EBEBD3; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 40px; z-index: 30;" id="volunteer">
-				<h1 style="font-size: 60px; margin: 0; margin-top: 50px; line-height: 60px; font-weight: bold; color: black;">UDHA Volunteer Initiative</h1>
-				<p style="color: black; margin-top: 50px; font-size: 25px">Since its initiation, UDHA has had a strong volunteer program that includes both national and international volunteers. We believe in improving our competence with both technical and student volunteers. UDHA has worked with over 100 volunteers both national and international. We also run an internship program for University students at different times of the year. </p>
-			</div>
-			<!-- Right: Image -->
-			<div style="flex: 3; display: flex; justify-content: center; align-items: center; z-index: 30;">
-				<img src="images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
-					alt="UDHA Project"
-					style="width: 100%; height: 100%; object-fit: cover; object-position: right; display: block;" />
-			</div>  
-  		</section>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-		<!-- Foooter -->
-		<footer style="background-color: #05a8aa; padding: 40px 20px; display: flex; flex-direction: column; align-items: center;">
-
-			<!-- Wrap the two lists in a container -->
-			<div style="display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%;">
-				<div style="flex: 1; min-width: 200px; transform: translateX(90px);">
-				<h3 style="color: white;">Sitemap</h3>
-				<ul style="list-style: none; padding: 0; margin: 0;">
-					<li style = "padding: 0;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-					<li style = "padding: 0;"><a href="ourprojects.html" style="color: white; text-decoration: none;">Our Projects</a></li>
-					<li style = "padding: 0;"><a href="aboutus.html" style="color: white; text-decoration: none;">About Us</a></li>
-					<li style = "padding: 0;"><a href="supportus.html" style="color: white; text-decoration: none;">Support Us</a></li>
+			<div class="footer-col">
+				<h4>Sitemap</h4>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="ourprojects.html">Our Projects</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="supportus.html">Support Us</a></li>
 				</ul>
-				</div>
-
-				<div style="flex: 1; min-width: 200px;">
-					<h3 style="color: white;">Uganda Development and Health Associates</h3>
-					<ul style="list-style: none; padding: 0; margin: 0;">
-						<li style="color: white; padding: 0;">Address: PO BOX/ADDRESS</li>
-						<li style="color: white; padding: 0;">Phone: PHONE NUMBER</li>
-						<li style="color: white; padding: 0;">Email: EMAIL</li>	
-					</ul>
-					<a href="https://www.omprakash.org/global/uganda-development-and-health-associates" style="color: white; z-index: 10; position: relative;">Omprakash</a>
-				</div>
 			</div>
-
-			<!-- Social Media Icons BELOW the columns -->
-			<div style="margin-top: 30px; display: flex; justify-content: center; gap: 60px;">
-				<a href="https://www.facebook.com/udha.uganda/about/?_rdr" target="_blank" style="color: white; font-size: 24px;">
-					<i class="fab fa-facebook-f"></i>
-				</a>
-				<a href="https://www.instagram.com/u.d.h.a/" target="_blank" style="color: white; font-size: 24px;">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a href="https://www.linkedin.com/company/ugandadevelopment-and-healthassociates/" target="_blank" style="color: white; font-size: 24px;">
-					<i class="fab fa-linkedin-in"></i>
-				</a>
+			<div class="footer-col">
+				<h4>Contact</h4>
+				<p>Address: PO BOX/ADDRESS</p>
+				<p>Phone: PHONE NUMBER</p>
+				<p>Email: EMAIL</p>
+				<a href="https://www.omprakash.org/global/uganda-development-and-health-associates">Omprakash Profile</a>
 			</div>
-		</footer>
-	</body>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 Uganda Development and Health Associates</p>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/udha.uganda/about/?_rdr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/u.d.h.a/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.linkedin.com/company/ugandadevelopment-and-healthassociates/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+		</div>
+	</footer>
+
+</body>
 </html>
